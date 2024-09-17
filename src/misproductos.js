@@ -1,21 +1,25 @@
 import React from 'react';
 import './navegacion.css';
 
-const Productos=({productos}) =>{
-    function Productos() {
-
+const Productos=({productos,eliminarProducto}) =>{
+    
         return(
-            <section className='section-productos'>
+        
+            <div className='section-productos'>
                 <h2>Mis Productos</h2>
     
-                <div>
+                <div className='contenedor-producto'>
                     <ul className='lista-productos'>
-                        {productos.length > 0 ? (
+                        {productos && productos.length > 0 ? (
                             productos.map((producto,index) => (
-                                <li key={index} className='producto-item'>
-                                    {producto}
+                                <ol key={index} className='lista-productos'>
+                                    <div className={index%2==0 ? 'amarillo' : 'azul'}>
+                                        {index+1}{' - '}{producto}
+                                        <button onClick={()=>eliminarProducto(index)} className='boton-eliminar'>Eliminar Producto</button>
+                                    </div>
                                     
-                                </li>
+                                    
+                                </ol>
                             ))
                         ) : (
                             <li>No hay productos.</li>
@@ -23,7 +27,7 @@ const Productos=({productos}) =>{
 
                     </ul>
                 </div>
-            </section>
+            </div>
         );
     
     
@@ -31,8 +35,5 @@ const Productos=({productos}) =>{
       
        
       }
-    
-
-}
 
 export default Productos;
