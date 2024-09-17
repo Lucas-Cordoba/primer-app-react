@@ -24,6 +24,7 @@
     color: white;
     margin: 0 auto;
     margin-top: 5rem;
+    padding-bottom: 2rem;
     border-radius: 2rem;
     text-align: center;
 }
@@ -72,8 +73,8 @@
     padding:1rem;
     border-radius: 0.5rem;
 }
-.azul{
-    background-color: blue;
+.celeste{
+    background-color: rgb(18, 166, 224);
     color:black;
     padding:1rem;
     border-radius: 0.5rem;
@@ -90,6 +91,19 @@
     border-radius: 0.5rem;
     cursor: pointer;
 }
+
+.boton-editar{
+   background-color: rgb(182, 173, 173);
+    font-size: 1rem;
+    color:black;
+    border:none;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
 
 .error{
     background-color: rgb(231, 0, 0);

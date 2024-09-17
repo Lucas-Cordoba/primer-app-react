@@ -18,13 +18,19 @@ const App = ()=>{
     const nuevaLista = productos.filter((_,i) => i !==index);
     setProducto(nuevaLista);
 
+  };
+
+  const editarProductos = (index,nuevoValor) =>{
+    const nuevaLista=productos.map((producto,i)  =>
+    i===index ? nuevoValor:producto);
+    setProducto(nuevaLista);
   }
 
   return(
     <>
     <Header/>
     <AgregarProducto agregarproducto={agregarProducto}/>
-    <Productos productos={productos} eliminarProducto={eliminarProducto}/>
+    <Productos productos={productos} eliminarProducto={eliminarProducto} editarProductos={editarProductos}/>
     </>
   );
 }
