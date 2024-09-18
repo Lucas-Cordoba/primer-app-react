@@ -41,15 +41,17 @@ const Productos=({productos,eliminarProducto,editarProductos}) =>{
                     <ul className='lista-productos'>
                         {productos && productos.length > 0 ? (
                             productos.map((producto,index) => (
-                                <ol key={index} className='lista-productos'>
-                                    <div className={index%2===0 ? 'amarillo' : 'celeste'}>
-                                        {index+1}{' - '}{producto}
-                                        <button onClick={()=>handleDelete(index)} className='boton-eliminar'>Eliminar Producto</button>
-                                        <button onClick={()=>handleEditClick(index,producto)} className='boton-editar'>Editar Producto</button>
-                                    </div>
+                                <li key={index} className={index%2===0 ? 'amarillo' : 'celeste'}>
+                                  
+                                        <div className='producto'>
+                                            <div>{index+1}{' - '}{producto}</div>
+                                            <button onClick={()=>handleDelete(index)} className='boton-eliminar'>Eliminar Producto</button>
+                                            <button onClick={()=>handleEditClick(index,producto)} className='boton-editar'>Editar Producto</button>
+                                        </div>
+                                        
                                     
                                     
-                                </ol>
+                                </li>
                             ))
                         ) : (
                             <li>No hay productos.</li>

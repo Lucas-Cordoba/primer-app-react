@@ -29,6 +29,52 @@
     text-align: center;
 }
 
+
+.lista-productos{
+    font-size:1rem;
+    font-weight: 900;
+    text-align: left;
+    margin:0 2rem;
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
+
+.producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.producto div{
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+.amarillo,.celeste{
+    color:black;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.amarillo{
+    background-color: yellow;
+}
+.celeste{
+    background-color: rgb(18, 166, 224);
+}
+
 .label{
     display: flex;
     flex-direction: row;
@@ -58,27 +104,7 @@
     padding: 0.5rem 1rem;
 }
 
-.lista-productos{
-    font-size:1rem;
-    font-weight: 900;
-    text-align: left;
-    margin:0 2rem;
-    padding: 0.3rem;
-    text-transform: uppercase;
-}
 
-.amarillo{
-    background-color: yellow;
-    color:black;
-    padding:1rem;
-    border-radius: 0.5rem;
-}
-.celeste{
-    background-color: rgb(18, 166, 224);
-    color:black;
-    padding:1rem;
-    border-radius: 0.5rem;
-}
 
 .boton-eliminar{
     background-color: rgb(231, 0, 0);
