@@ -106,10 +106,8 @@
 
 
 
-.boton-eliminar{
-    background-color: rgb(231, 0, 0);
+.boton-eliminar,.boton-editar{
     font-size: 1rem;
-    color:white;
     border:none;
     padding: 0.5rem;
     margin-left: 2rem;
@@ -118,16 +116,14 @@
     cursor: pointer;
 }
 
+.boton-eliminar{
+    background-color: rgb(231, 0, 0);
+    color:white;
+}
+
 .boton-editar{
    background-color: rgb(182, 173, 173);
-    font-size: 1rem;
     color:black;
-    border:none;
-    padding: 0.5rem;
-    margin-left: 2rem;
-    font-weight: 900;
-    border-radius: 0.5rem;
-    cursor: pointer;
 }
 
 
